@@ -12,7 +12,9 @@ const displayImages = function(data){
         const html = `
         <div class="card">
             <img src= "${card.urls.thumb}"/>
-            <h3>Author: ${card.user.name}</h3>
+            <div class="description">
+                <h3>Author: ${card.user.name}</h3>
+            </div>
         </div>
     
         `
@@ -24,12 +26,12 @@ const displayImages = function(data){
 
 const getData = async function(){
     try{
-        const response = await fetch(`${url}/photos/?client_id=${key}&per_page=50`);
+        const response = await fetch(`${url}/search/photos?client_id=${key}&per_page=30&query=nature&orientation=portrait`);
         if(!response) throw new Error(`Could not get data ${response.status}`);
         const data = await response.json();
 
-        console.log(data)
-        displayImages(data);
+        console.log(data.results )
+        displayImages(data.results);
     } catch(err){
         console.error(`Could not display images ${err}`)
     }
