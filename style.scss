@@ -38,6 +38,10 @@ body{
         justify-content: space-between;
         flex-wrap: wrap;
         margin: 0 auto;
+
+        @media screen and (max-width:400px){
+        justify-content: center;
+             }
     }
 
         .card{
@@ -53,14 +57,17 @@ body{
         margin-top: 30px;
         margin-bottom: 20px;
         position: relative;
-        }
 
         @media screen and (max-width:400px){
-        .card{
-        width: 15rem;
-        height: 20rem;
+               
+            width: 15rem;
+            height: 20rem;
+         
+          
         }
-         }
+        }
+
+       
 
             .card img{
             width: 100%;
