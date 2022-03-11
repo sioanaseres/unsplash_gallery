@@ -25,9 +25,16 @@ body{
             margin-top: 0;
             margin-bottom: 0.2rem;
 
+            @media screen and (max-width:500px){
+                font-size: 4rem;
+                     }
+
         }
         h2{
             color: #ffffff;
+            @media screen and (max-width:500px){
+                font-size: 1rem;
+                     }
 
         }
     .container{
@@ -39,7 +46,7 @@ body{
         flex-wrap: wrap;
         margin: 0 auto;
 
-        @media screen and (max-width:400px){
+        @media screen and (max-width:730px){
         justify-content: center;
              }
     }
